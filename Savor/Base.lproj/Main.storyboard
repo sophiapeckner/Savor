@@ -42,6 +42,31 @@
             </objects>
             <point key="canvasLocation" x="1040.1869158878503" y="89.416846652267822"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="omu-W9-xnz">
+            <objects>
+                <viewController id="CMy-ru-dWi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p1P-7a-10i">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About the Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-JV-1O6">
+                                <rect key="frame" x="121" y="100" width="186" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DYF-JO-ayn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="recipeExpandedViewController"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xV-in-JU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="774"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NZQ-8p-wFW">
             <objects>

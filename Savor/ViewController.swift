@@ -16,7 +16,17 @@ class ViewController: UIViewController {
     
     @IBAction func nextButton(){
         let vc = RecipeTableViewController()
+        vc.models = [
+            ("Fruit", {
+                print("here")
+            })
+        ]
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+//    func showViewController(){
+//        let newViewController = NewViewController()
+//        self.navigationController?.pushViewController(newViewController, animated: true)
+//    }
 }
 
