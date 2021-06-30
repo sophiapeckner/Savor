@@ -7,6 +7,18 @@
 
 import UIKit
 
+class Variables{
+    static var global = Variables(selectedRecipe: "", recipes: [""])
+    
+    var selectedRecipe: String
+    var recipes: [String]
+    
+    private init(selectedRecipe: String, recipes: [String]){
+        self.selectedRecipe = selectedRecipe
+        self.recipes = recipes
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -14,15 +26,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func nextButton(){
-        let vc = RecipeTableViewController()
-        vc.models = [
-            ("Fruit", {
-                print("here")
-            })
-        ]
-        navigationController?.pushViewController(vc, animated: true)
-    }
+    
     
 //    func showViewController(){
 //        let newViewController = NewViewController()
