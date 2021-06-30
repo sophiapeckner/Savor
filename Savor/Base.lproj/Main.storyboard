@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="3"/>
                                 <state key="normal" title="Button" image="arrow1"/>
                                 <connections>
-                                    <action selector="nextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0a-hi-aiu"/>
+                                    <action selector="nextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="d3m-3i-r2C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +47,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wa0-gZ-sYb" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KyJ-bA-UGq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1A-Ee-obW">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
