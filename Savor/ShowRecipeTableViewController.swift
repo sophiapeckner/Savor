@@ -56,6 +56,8 @@ class ShowRecipeTableViewController: UITableViewController {
     func findRecipeNames(){
         if (myNutrients == "glutenFree"){
             myDict = glutenFree
+        } else if (myNutrients == "vegitarian"){
+            myDict = vegitarian
         }
     }
     
@@ -64,6 +66,7 @@ class ShowRecipeTableViewController: UITableViewController {
         // Preserves table view selection
         self.clearsSelectionOnViewWillAppear = false
         findRecipeNames()
+        print(myDict)
         // Sets the recipes
         Variables.global.recipes = ["Fruits", "Veggies", "Corn"]
     }
