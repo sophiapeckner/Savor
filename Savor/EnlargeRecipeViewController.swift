@@ -16,10 +16,14 @@ class EnlargeRecipeViewController: UIViewController {
     
     @IBOutlet weak var instructionLabel: UILabel!
     
+    @IBOutlet weak var recipeLink: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         ingredientLabel.text = ""
+        
+        recipeLink.addTarget(self, action: #selector(openLink), for: .touchUpInside)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +56,14 @@ class EnlargeRecipeViewController: UIViewController {
             instructions.append(recipeInfo[0] as! String)
         }
         return instructions
+    }
+    
+    @objc func openLink(){
+        if let urlToOpen = URL (string: "https://www.amazon.com"){
+                UIApplication.shared.open(urlToOpen, options: [:]){ (done) in
+                print("Link was opened successfully")
+            }
+        }
     }
     
 //    func getIngredients(recipeDict: [String:Array<Any>]) -> [String]{
