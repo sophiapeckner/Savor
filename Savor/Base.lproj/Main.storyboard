@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26g-bL-ZcU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26g-bL-ZcU">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-571" y="89"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="Zj4-J6-G0g">
             <objects>
-                <viewController id="heP-Gc-nF2" sceneMemberID="viewController">
+                <viewController id="heP-Gc-nF2" customClass="ProfileViewController" customModule="Savor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vg8-2P-h07">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="arrow1"/>
                                 <connections>
+                                    <action selector="nextButton:" destination="heP-Gc-nF2" eventType="touchUpInside" id="Auc-K1-082"/>
                                     <segue destination="ufd-SR-neq" kind="presentation" modalPresentationStyle="fullScreen" id="Ufm-Nj-AZY"/>
                                 </connections>
                             </button>
@@ -65,23 +66,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZe-pO-k9v">
-                                <rect key="frame" x="173" y="267" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gluten-Free"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S07-cT-BTu">
-                                <rect key="frame" x="186" y="323" width="57" height="30"/>
+                                <rect key="frame" x="186" y="408" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Diabetic"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0n-Gy-bS0">
-                                <rect key="frame" x="193" y="380" width="43" height="30"/>
+                                <rect key="frame" x="173" y="319" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vegan"/>
+                                <state key="normal" title="Vegitarian"/>
+                                <connections>
+                                    <action selector="vegitarianTap:" destination="heP-Gc-nF2" eventType="touchUpInside" id="ypQ-pX-2cj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEY-9q-MiD">
-                                <rect key="frame" x="199" y="431" width="30" height="30"/>
+                                <rect key="frame" x="199" y="370" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="N/A"/>
                             </button>
@@ -99,10 +98,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRh-nl-qMu">
+                                <rect key="frame" x="166" y="266" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gluten-Free"/>
+                                <connections>
+                                    <action selector="glutenFreeTap:" destination="heP-Gc-nF2" eventType="touchUpInside" id="5J5-0z-aXj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DRj-y9-yEp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="titleText" destination="8ch-Ed-onh" id="3X0-SU-wKv"/>
+                        <outlet property="vegitarianButton" destination="H0n-Gy-bS0" id="eVk-1W-tOl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nL-mm-V7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,7 +129,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" textLabel="Fww-vm-JBl" imageView="v6S-yJ-97Y" rowHeight="80" style="IBUITableViewCellStyleDefault" id="H34-ef-4k4">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="428" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H34-ef-4k4" id="HzI-rb-3OF">
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="80"/>
@@ -244,7 +255,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5DX-mL-qYy"/>
+        <segue reference="SeQ-a1-Gfe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Corn" width="460" height="460"/>
