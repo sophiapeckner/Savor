@@ -7,8 +7,14 @@
 
 import UIKit
 
+var myGroceryList = [String:[String]]()
+
 class EnlargeRecipeViewController: UIViewController {
 
+    
+    @IBOutlet weak var addButton: UIButton!
+    
+    @IBOutlet weak var addGroceryList: UIButton!
     
     @IBOutlet weak var recipeNameLabel: UILabel!
     
@@ -66,7 +72,26 @@ class EnlargeRecipeViewController: UIViewController {
         }
     }
     
-//    func getIngredients(recipeDict: [String:Array<Any>]) -> [String]{
+    
+    
+    @IBAction func addButtonTap(_ sender: UIButton) {
+        addButton.isHidden = true
+        addGroceryList.isHidden = false
+        
+        //*
+        let alertController = UIAlertController(title: "Added", message: "The ingredients have been added to your grocery list", preferredStyle: UIAlertController.Style.alert)
+               
+                alertController.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+               
+                present(alertController, animated: true, completion: nil)
+        //*
+        
+        
+        
+        
+    }
+    
+    //    func getIngredients(recipeDict: [String:Array<Any>]) -> [String]{
 //
 //    }
     
