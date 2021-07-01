@@ -14,6 +14,9 @@ class EnlargeRecipeViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
+//    button.layer.borderWidth = 1
+//    button.layer.borderColor = UIColor.black.cgColor
+    
     @IBOutlet weak var addGroceryList: UIButton!
     
     @IBOutlet weak var recipeNameLabel: UILabel!
@@ -86,8 +89,13 @@ class EnlargeRecipeViewController: UIViewController {
                 present(alertController, animated: true, completion: nil)
         //*
         
+        let myName = Variables.global.selectedRecipe
         
+        let myIngredients = myDict[Variables.global.selectedRecipe]![1]
         
+        myGroceryList[myName] = (myIngredients as! [String])
+        
+//        print(myGroceryList)
         
     }
     
