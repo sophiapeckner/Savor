@@ -53,7 +53,7 @@ class ShowRecipeTableViewController: UITableViewController {
     // ***
     
     
-    func findRecipeNames(){
+    func findRecipe(){
         if (myNutrients == "glutenFree"){
             myDict = glutenFree
         } else if (myNutrients == "vegitarian"){
@@ -61,12 +61,20 @@ class ShowRecipeTableViewController: UITableViewController {
         }
     }
     
+    func filterRecipeName(recipeDict: [String:Array<Any>]){
+        for (name, _) in recipeDict {
+            print("Name: \(name)")
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Preserves table view selection
         self.clearsSelectionOnViewWillAppear = false
-        findRecipeNames()
-        print(myDict)
+        findRecipe()
+        filterRecipeName(recipeDict: myDict)
+        print("myDict... \(myDict)")
         // Sets the recipes
         Variables.global.recipes = ["Fruits", "Veggies", "Corn"]
     }
