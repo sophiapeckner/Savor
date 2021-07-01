@@ -59,13 +59,15 @@ class ShowRecipeTableViewController: UITableViewController {
         } else if (myNutrients == "vegitarian"){
             myDict = vegitarian
         }
+        print(myDict)
     }
     
-    func filterRecipeName(recipeDict: [String:Array<Any>]){
+    func filterRecipeName(recipeDict: [String:Array<Any>]) -> [String]{
+        var nameArray = [String]()
         for (name, _) in recipeDict {
-            print("Name: \(name)")
+            nameArray.append(name)
         }
-        
+        return nameArray
     }
     
     override func viewDidLoad() {
@@ -73,10 +75,9 @@ class ShowRecipeTableViewController: UITableViewController {
         // Preserves table view selection
         self.clearsSelectionOnViewWillAppear = false
         findRecipe()
-        filterRecipeName(recipeDict: myDict)
-        print("myDict... \(myDict)")
+        let myNameArray = filterRecipeName(recipeDict: myDict)
         // Sets the recipes
-        Variables.global.recipes = ["Fruits", "Veggies", "Corn"]
+        Variables.global.recipes = myNameArray
     }
 
     // MARK: - Table view data source

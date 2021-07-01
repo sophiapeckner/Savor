@@ -10,10 +10,15 @@ import UIKit
 class EnlargeRecipeViewController: UIViewController {
 
     
+    @IBOutlet weak var recipeNameLabel: UILabel!
+    
     @IBOutlet weak var ingredientLabel: UILabel!
+    
+    @IBOutlet weak var instructionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         ingredientLabel.text = ""
     }
     
@@ -21,11 +26,39 @@ class EnlargeRecipeViewController: UIViewController {
         super.viewDidAppear(true)
             
         ingredientLabel.numberOfLines = 0
-        ingredientLabel.text = "\(Variables.global.selectedRecipe) ingredients"
-            
+//        ingredientLabel.text = "\(Variables.global.selectedRecipe) ingredients"
+        
+        recipeNameLabel.text = Variables.global.selectedRecipe
+        
+//        let myInstructions = getInstructions(recipeDict: myDict)
+        
+        let myIngredients = myDict[Variables.global.selectedRecipe]![1]
+        
+        for i in (myIngredients as! [String]) {
+            ingredientLabel.text = ingredientLabel.text! + " \(i) \n "
+        }
+        
+        let myInstructions = myDict[Variables.global.selectedRecipe]![0]
+        
+        instructionLabel.text = "Instructions Link: \(myInstructions)"
+        // Sets the recipes
+        
 //        print(Variables.global.recipes)
     }
     
+    func getInstructions(recipeDict: [String:Array<Any>]) -> [String]{
+        var instructions = [String]()
+        for (_, recipeInfo) in recipeDict {
+            instructions.append(recipeInfo[0] as! String)
+        }
+        return instructions
+    }
+    
+//    func getIngredients(recipeDict: [String:Array<Any>]) -> [String]{
+//
+//    }
+    
+        
     /*
     // MARK: - Navigation
 
