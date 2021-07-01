@@ -11,7 +11,9 @@ class ShowRecipeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Preserves table view selection
         self.clearsSelectionOnViewWillAppear = false
+        // Sets the recipes
         Variables.global.recipes = ["Fruits", "Veggies", "Corn"]
     }
 
@@ -22,15 +24,19 @@ class ShowRecipeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Returns the reusable cell called labelCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath)
+        // Fills corresponding recipes label
         cell.textLabel?.text = Variables.global.recipes[indexPath.row]
         cell.detailTextLabel?.numberOfLines = 2
         tableView.rowHeight = 80
+        // Fills corresponding image
         cell.imageView?.image = UIImage(named: Variables.global.recipes[indexPath.row])
 
         return cell
     }
 
+    // After selecting a row, sets selectedRecipe to that meal's name
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
             tableView.deselectRow(at: indexPath, animated: true)
             Variables.global.selectedRecipe = Variables.global.recipes[indexPath.row]

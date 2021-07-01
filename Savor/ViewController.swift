@@ -9,9 +9,8 @@ import UIKit
 
 class Variables{
     static var global = Variables(selectedRecipe: "", recipes: [""])
-    
     var selectedRecipe: String
-    var recipes: [String]
+    var recipes: [String]           // Collection of all meals
     
     private init(selectedRecipe: String, recipes: [String]){
         self.selectedRecipe = selectedRecipe
