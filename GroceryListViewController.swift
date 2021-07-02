@@ -9,11 +9,10 @@ import UIKit
 
 class GroceryListViewController: UIViewController {
 
-    @IBOutlet weak var showIngredients: UILabel!
+    @IBOutlet weak var showIngredients: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         showGroceryList()
 
         // Do any additional setup after loading the view.
@@ -21,9 +20,9 @@ class GroceryListViewController: UIViewController {
     
     func showGroceryList(){
         for (name, ingredients) in myGroceryList {
-            showIngredients.text = showIngredients.text! + "\(name):\n"
+            showIngredients.text = showIngredients.text! + "\n\(name):"
             for ingredient in ingredients {
-                showIngredients.text = showIngredients.text! + "\n\(ingredient)"
+                showIngredients.text = showIngredients.text! + "\n●\(ingredient)"
             }
         }
     }
