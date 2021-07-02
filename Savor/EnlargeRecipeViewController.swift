@@ -8,6 +8,7 @@
 import UIKit
 
 var myGroceryList = [String:[String]]()
+var hasAdded = [Bool]()
 
 class EnlargeRecipeViewController: UIViewController {
 
@@ -29,7 +30,11 @@ class EnlargeRecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for _ in Variables.global.recipes {
+            hasAdded.append(false)
+        }
+        
         ingredientLabel.text = ""
         
         recipeLink.addTarget(self, action: #selector(openLink), for: .touchUpInside)
@@ -39,6 +44,8 @@ class EnlargeRecipeViewController: UIViewController {
         super.viewDidAppear(true)
             
         ingredientLabel.numberOfLines = 0
+        
+        ingredientLabel.text = ""
 //        ingredientLabel.text = "\(Variables.global.selectedRecipe) ingredients"
         
         recipeNameLabel.text = Variables.global.selectedRecipe

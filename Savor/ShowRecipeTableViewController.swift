@@ -8,6 +8,8 @@
 import UIKit
 
 var myDict : [String:Array] = [String:Array<Any>]()
+var noneTapped = true
+var hasTapped = [Bool]()
 
 class ShowRecipeTableViewController: UITableViewController {
     
@@ -78,6 +80,13 @@ class ShowRecipeTableViewController: UITableViewController {
         let myNameArray = filterRecipeName(recipeDict: myDict)
         // Sets the recipes
         Variables.global.recipes = myNameArray
+        
+        if (noneTapped == true){
+            for _ in Variables.global.recipes {
+                hasTapped.append(false)
+            }
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -96,13 +105,21 @@ class ShowRecipeTableViewController: UITableViewController {
         // Fills corresponding image
         cell.imageView?.image = UIImage(named: Variables.global.recipes[indexPath.row])
 
+        for myIndex in 0...hasTapped.count-1{
+            if (hasTapped[myIndex] == true){
+                cell.textLabel?.text = Variables.global.recipes[indexPath.row] + "✅"
+            }
+        }
         return cell
     }
 
     // After selecting a row, sets selectedRecipe to that meal's name
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-            tableView.deselectRow(at: indexPath, animated: true)
-            Variables.global.selectedRecipe = Variables.global.recipes[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+        Variables.global.selectedRecipe = Variables.global.recipes[indexPath.row]
+//        cell.backgroundColor=UIColor.systemRed
+        noneTapped = false
+        hasTapped[indexPath.row] = true
     }
 
     /*

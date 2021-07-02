@@ -254,6 +254,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99626857040000005" green="0.97474962470000004" blue="0.87873727079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="FVP-jI-xkR" kind="presentation" modalPresentationStyle="automatic" id="r6P-xN-KBt"/>
                                 </connections>
@@ -441,7 +442,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mge-j9-Riq"/>
+        <segue reference="r6P-xN-KBt"/>
+        <segue reference="L4v-Aa-AYO"/>
         <segue reference="4t7-mV-GCb"/>
         <segue reference="20o-bP-Abg"/>
     </inferredMetricsTieBreakers>
