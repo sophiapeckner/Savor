@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m6A-jg-YvV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m6A-jg-YvV">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -226,7 +226,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07p-C6-kRK">
                                 <rect key="frame" x="179" y="821" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="homeBrown"/>
+                                <state key="normal" title="Button" image="listBrown"/>
                                 <connections>
                                     <segue destination="ufd-SR-neq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bbI-LK-OzT"/>
                                 </connections>
@@ -251,7 +251,7 @@
                         <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" textLabel="Fww-vm-JBl" imageView="v6S-yJ-97Y" rowHeight="80" style="IBUITableViewCellStyleDefault" id="H34-ef-4k4">
-                                <rect key="frame" x="0.0" y="28" width="428" height="80"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H34-ef-4k4" id="HzI-rb-3OF">
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="80"/>
@@ -306,6 +306,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-Wi-pEP">
+                                <rect key="frame" x="20" y="201" width="388" height="525"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions Link:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tv-HM-sH7">
                                 <rect key="frame" x="45" y="812" width="339" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -313,17 +320,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q38-Oz-UZs">
-                                <rect key="frame" x="256" y="44" width="149" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="See Grocery List">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aVp-Ou-knt" kind="presentation" modalPresentationStyle="fullScreen" id="mge-j9-Riq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ube-VY-vBP">
                                 <rect key="frame" x="43" y="41" width="81" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -379,18 +375,23 @@
                                 <color key="textColor" red="0.56155037880000003" green="0.31013384459999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-Gn-sab">
-                                <rect key="frame" x="43" y="379" width="350" height="316"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q38-Oz-UZs">
+                                <rect key="frame" x="236" y="43" width="164" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99626857040000005" green="0.97474962470000004" blue="0.87873727079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" red="0.56155037880000003" green="0.31013384459999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-jd-Q52">
-                                <rect key="frame" x="87" y="197" width="257" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="See Grocery List">
+                                    <color key="titleColor" red="0.99584501979999995" green="0.98059040310000001" blue="0.87380427120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="aVp-Ou-knt" kind="presentation" modalPresentationStyle="fullScreen" id="mge-j9-Riq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vIM-cF-Okj"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -403,7 +404,7 @@
                     <connections>
                         <outlet property="addButton" destination="r0D-G7-oYJ" id="61G-r1-WB3"/>
                         <outlet property="addGroceryList" destination="q38-Oz-UZs" id="ghW-fw-1eH"/>
-                        <outlet property="ingredientLabel" destination="Wwz-Gn-sab" id="naM-oB-ohU"/>
+                        <outlet property="ingredientLabel" destination="ZSM-Wi-pEP" id="sbn-lw-lqm"/>
                         <outlet property="instructionLabel" destination="1Tv-HM-sH7" id="NRA-dP-wdO"/>
                         <outlet property="recipeLink" destination="fH5-dD-07Y" id="2Vf-YP-izB"/>
                         <outlet property="recipeNameLabel" destination="HtB-bp-l5W" id="6Vu-hn-OfE"/>
@@ -439,7 +440,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-7W-0IT">
                                 <rect key="frame" x="74" y="838" width="57" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="homeBrown"/>
+                                <state key="normal" title="Button" image="listBrown"/>
                                 <connections>
                                     <segue destination="ufd-SR-neq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="RXo-Xc-VQM"/>
                                 </connections>
@@ -503,8 +504,8 @@
     <resources>
         <image name="SavorBig" width="500" height="500"/>
         <image name="SavorLogoOnly" width="500" height="500"/>
-        <image name="homeBrown" width="500" height="500"/>
         <image name="leftArrowBrown" width="500" height="500"/>
+        <image name="listBrown" width="500" height="500"/>
         <image name="profileBrown" width="500" height="500"/>
         <image name="rightArrowBrown" width="500" height="500"/>
         <systemColor name="labelColor">
