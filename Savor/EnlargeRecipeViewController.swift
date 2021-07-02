@@ -75,7 +75,11 @@ class EnlargeRecipeViewController: UIViewController {
     }
     
     @objc func openLink(){
-        if let urlToOpen = URL (string: "https://www.amazon.com"){
+        let myLink = myDict[Variables.global.selectedRecipe]![0]
+        
+        print(myLink)
+        
+        if let urlToOpen = URL (string: myLink as! String){
                 UIApplication.shared.open(urlToOpen, options: [:]){ (done) in
                 print("Link was opened successfully")
             }
