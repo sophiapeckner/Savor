@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SavorBig" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-Jr-RYa">
-                                <rect key="frame" x="31" y="152" width="367" height="406"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9p-Vj-8Os">
                                 <rect key="frame" x="109" y="647" width="211" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -38,6 +34,10 @@
                                     <segue destination="heP-Gc-nF2" kind="presentation" id="h7k-c5-gZV"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SavorBig" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-Jr-RYa">
+                                <rect key="frame" x="31" y="172" width="367" height="406"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dzG-eK-GyO"/>
                         <color key="backgroundColor" red="0.99626857040000005" green="0.97474962470000004" blue="0.87873727079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -224,7 +224,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07p-C6-kRK">
-                                <rect key="frame" x="179" y="821" width="70" height="71"/>
+                                <rect key="frame" x="179" y="821" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="homeBrown"/>
                                 <connections>
@@ -264,7 +264,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Corn" id="v6S-yJ-97Y">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="SavorLogoOnly" id="v6S-yJ-97Y">
                                             <rect key="frame" x="20" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -345,11 +345,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fMK-hn-CGb" kind="presentation" modalPresentationStyle="fullScreen" id="4t7-mV-GCb"/>
+                                    <segue destination="fMK-hn-CGb" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4t7-mV-GCb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0D-G7-oYJ">
-                                <rect key="frame" x="331" y="30" width="65" height="65"/>
+                                <rect key="frame" x="303" y="41" width="81" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96311718229999999" green="0.79255819319999998" blue="0.31293636559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
@@ -358,7 +358,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="33"/>
+                                        <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -380,7 +380,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Name:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtB-bp-l5W">
-                                <rect key="frame" x="20" y="79" width="388" height="114"/>
+                                <rect key="frame" x="20" y="91" width="388" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                 <color key="textColor" red="0.56155037880000003" green="0.31013384459999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -432,7 +432,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-7W-0IT">
-                                <rect key="frame" x="74" y="838" width="60" height="60"/>
+                                <rect key="frame" x="74" y="838" width="57" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="homeBrown"/>
                                 <connections>
@@ -468,7 +468,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ufd-SR-neq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="IsV-Om-H1U">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="IsV-Om-H1U">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="1cF-sL-Ok6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BQj-GY-63b">
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -492,12 +492,12 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="L4v-Aa-AYO"/>
-        <segue reference="saV-2O-16x"/>
+        <segue reference="2jg-wy-GVV"/>
         <segue reference="20o-bP-Abg"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Corn" width="460" height="460"/>
         <image name="SavorBig" width="500" height="500"/>
+        <image name="SavorLogoOnly" width="500" height="500"/>
         <image name="homeBrown" width="500" height="500"/>
         <image name="leftArrowBrown" width="500" height="500"/>
         <image name="profileBrown" width="500" height="500"/>
