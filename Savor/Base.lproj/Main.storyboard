@@ -226,7 +226,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07p-C6-kRK">
                                 <rect key="frame" x="179" y="821" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="homeBrown"/>
+                                <state key="normal" title="Button" image="listBrown"/>
                                 <connections>
                                     <segue destination="ufd-SR-neq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bbI-LK-OzT"/>
                                 </connections>
@@ -320,17 +320,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q38-Oz-UZs">
-                                <rect key="frame" x="256" y="44" width="149" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="See Grocery List">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aVp-Ou-knt" kind="presentation" modalPresentationStyle="fullScreen" id="mge-j9-Riq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ube-VY-vBP">
                                 <rect key="frame" x="43" y="41" width="81" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -386,6 +375,23 @@
                                 <color key="textColor" red="0.56155037880000003" green="0.31013384459999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q38-Oz-UZs">
+                                <rect key="frame" x="236" y="43" width="164" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.56155037880000003" green="0.31013384459999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="See Grocery List">
+                                    <color key="titleColor" red="0.99584501979999995" green="0.98059040310000001" blue="0.87380427120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="aVp-Ou-knt" kind="presentation" modalPresentationStyle="fullScreen" id="mge-j9-Riq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vIM-cF-Okj"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -434,7 +440,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-7W-0IT">
                                 <rect key="frame" x="74" y="838" width="57" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="homeBrown"/>
+                                <state key="normal" title="Button" image="listBrown"/>
                                 <connections>
                                     <segue destination="ufd-SR-neq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="RXo-Xc-VQM"/>
                                 </connections>
@@ -498,8 +504,8 @@
     <resources>
         <image name="SavorBig" width="500" height="500"/>
         <image name="SavorLogoOnly" width="500" height="500"/>
-        <image name="homeBrown" width="500" height="500"/>
         <image name="leftArrowBrown" width="500" height="500"/>
+        <image name="listBrown" width="500" height="500"/>
         <image name="profileBrown" width="500" height="500"/>
         <image name="rightArrowBrown" width="500" height="500"/>
         <systemColor name="labelColor">
