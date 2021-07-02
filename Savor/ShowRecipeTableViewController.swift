@@ -17,37 +17,37 @@ class ShowRecipeTableViewController: UITableViewController {
     let glutenFree = [
       "Bing's Mango Salsa":
       ["https://www.foodista.com/recipe/84DB7TTN/bing-s-mango-salsa",
-      ["sweet mangoes", "lime zest", "lime (juice)", "mint leaves", "red onion", "salt", "black pepper", "sugar", "fresh chilli"]],
+       ["sweet mangoes", "lime zest", "lime (juice)", "mint leaves", "red onion", "salt", "black pepper", "sugar", "fresh chilli"], "https://spoonacular.com/recipeImages/634992-556x370.jpg"],
 
       "Healthy Vegan Red Velvet Brownies":["http://www.foodista.com/recipe/YGBD7J2L/healthy-vegan-red-velvet-brownies",
-      ["almond extract", "apple sauce", "baking powder", "baking soda", "cooked beets", "brown sugar", "cocoa powder", "ground flaxseed", "red kidney beans", "salt", "vanilla extract"]],
+      ["almond extract", "apple sauce", "baking powder", "baking soda", "cooked beets", "brown sugar", "cocoa powder", "ground flaxseed", "red kidney beans", "salt", "vanilla extract"], "https://spoonacular.com/recipeImages/646524-556x370.jpg"],
 
-      "Mussels & Clams in White Wine {Cozze e Vongole}":["http://www.foodista.com/recipe/TXM3X2KZ/mussels-clams-in-white-wine-cozze-e-vongole", ["cherry tomatoes", "chili flakes", "fresh parsley", "garlic", "olive oil", "salt", "white wine"]],
+      "Mussels & Clams in White Wine {Cozze e Vongole}":["http://www.foodista.com/recipe/TXM3X2KZ/mussels-clams-in-white-wine-cozze-e-vongole", ["cherry tomatoes", "chili flakes", "fresh parsley", "garlic", "olive oil", "salt", "white wine"], "https://spoonacular.com/recipeImages/652750-556x370.jpg"],
 
-      "Drunken Noodles (Pad Kee Mao)":["https://www.foodista.com/recipe/3BKDFD6S/drunken-noodles-pad-kee-mao", ["canola oil", "fresh rice noodles", "zucchini", "japanese eggplant", "broccoli florets", "carrot", "dry tofu", "fresh peppercorns", "garlic", "chilies", "chili", "bbq sauce", "braggs liquid aminos", "tamari", "white soy sauce", "stevia", "water", "basil leaves", "vinegar"]],
+      "Drunken Noodles (Pad Kee Mao)":["https://www.foodista.com/recipe/3BKDFD6S/drunken-noodles-pad-kee-mao", ["canola oil", "fresh rice noodles", "zucchini", "japanese eggplant", "broccoli florets", "carrot", "dry tofu", "fresh peppercorns", "garlic", "chilies", "chili", "bbq sauce", "braggs liquid aminos", "tamari", "white soy sauce", "stevia", "water", "basil leaves", "vinegar"], "https://www.foodista.com/sites/default/files/Picture4.png"],
 
       "Balsamic Roasted Vegetables":["https://www.foodista.com/recipe/LGRN2255/balsamic-roasted-vegetables",
-      ["golden beets", "red beets", "fennel bulb", "red onion", "fingerling potatoes", "kabocha squash", "olive oil", "balsamic vinegar"]]
+      ["golden beets", "red beets", "fennel bulb", "red onion", "fingerling potatoes", "kabocha squash", "olive oil", "balsamic vinegar"], "https://spoonacular.com/recipeImages/633942-556x370.jpg"]
     ]
 
     let vegetarian = [
       "Naturally Sweet Apple Turnovers":
       ["http://www.foodista.com/recipe/TYW8P8Z5/naturally-sweet-apple-turnovers",
-      ["diced apples", "brown sugar", "cream cheese", "egg yolk", "filo dough", "flour", "ground allspice", "ground cardamom", "ground cinnamon", "ground ginger", "lemon (juice)", "kosher salt", "maple syrup", "milk", "powdered sugar", "sugar", "unsalted butter", "frangelico"]],
+      ["diced apples", "brown sugar", "cream cheese", "egg yolk", "filo dough", "flour", "ground allspice", "ground cardamom", "ground cinnamon", "ground ginger", "lemon (juice)", "kosher salt", "maple syrup", "milk", "powdered sugar", "sugar", "unsalted butter", "frangelico"], "https://spoonacular.com/recipeImages/652976-556x370.jpg"],
 
       "Cheddar Chile Beer Bread":
       ["https://www.foodista.com/recipe/583RP66G/cheddar-chile-beer-bread",
-      ["whole wheat flour", "flour", "baking powder", "salt", "dry mustard", "beer", "white shredded extra sharp cheddar cheese", "canned green chiles", "sesame seeds", "poppy seeds", "caraway seeds", "sea salt"]],
+      ["whole wheat flour", "flour", "baking powder", "salt", "dry mustard", "beer", "white shredded extra sharp cheddar cheese", "canned green chiles", "sesame seeds", "poppy seeds", "caraway seeds", "sea salt"], "https://spoonacular.com/recipeImages/637506-556x370.jpg"],
 
       "Easy Lemon Feta Greek Yogurt Dip":["http://fullbellysisters.blogspot.com/2016/01/easy-lemon-feta-greek-yogurt-dip.html",
-      ["extra virgin olive oil", "feta cheese", "garlic clove", "lemon juice", "lemon zest", "plain greek yogurt", "red pepper flakes"]],
+      ["extra virgin olive oil", "feta cheese", "garlic clove", "lemon juice", "lemon zest", "plain greek yogurt", "red pepper flakes"], "https://4.bp.blogspot.com/-SjfuTYCT6mw/VopdTfK2XBI/AAAAAAAAFTA/9ZA7vpDDCO8/s1600/lemon%2Bfeta%2Bgreek%2Byogurt%2Bdip.jpg"],
 
       "Blueberry Banana Pancakes":
       ["http://www.foodista.com/recipe/QNQXL7YN/blueberry-banana-pancakes",
-      ["baking soda", "banana", "fresh blueberries", "egg whites", "plain greek yogurt", "salt", "sugar", "vanilla extract", "whole wheat pastry flour"]],
+      ["baking soda", "banana", "fresh blueberries", "egg whites", "plain greek yogurt", "salt", "sugar", "vanilla extract", "whole wheat pastry flour"], "https://spoonacular.com/recipeImages/635418-556x370.jpg"],
 
       "Caramelized Tofu & Gala Apple Salad":["http://www.foodista.com/recipe/SRNHDHGT/caramelized-tofu-gala-apple-salad",
-      ["brown sugar", "butter", "extra firm tofu", "diced gala apple", "garlic", "green lettuce", "raw pecans", "water"]]
+      ["brown sugar", "butter", "extra firm tofu", "diced gala apple", "garlic", "green lettuce", "raw pecans", "water"], "https://spoonacular.com/recipeImages/637067-556x370.jpg"]
     ]
     
     
@@ -124,6 +124,7 @@ class ShowRecipeTableViewController: UITableViewController {
         tableView.rowHeight = 80
         // Fills corresponding image
         cell.imageView?.image = UIImage(named: Variables.global.recipes[indexPath.row])
+        
         return cell
     }
 

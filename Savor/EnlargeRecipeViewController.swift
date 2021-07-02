@@ -20,6 +20,7 @@ class EnlargeRecipeViewController: UIViewController {
     
     @IBOutlet weak var addGroceryList: UIButton!
     
+    
     @IBOutlet weak var ingredientLabel: UITextView!
     
     @IBOutlet weak var recipeNameLabel: UILabel!
@@ -28,9 +29,29 @@ class EnlargeRecipeViewController: UIViewController {
     
     @IBOutlet weak var recipeLink: UIButton!
     
+    @IBOutlet weak var recipeImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+//        var url = value![2] as! String
+//        print("URL: \(url)")
+        /*
+        var url = URL(string: myDict[Variables.global.selectedRecipe]![2] as! String)!
+        
+        print("URL: \(url)")
+        
+        DispatchQueue.global().async {
+            // Fetch Image Data
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    // Create Image and Update Image View
+                    self.recipeImage.image = UIImage(data: data)
+                }
+            }
+        }
+        */
         for _ in Variables.global.recipes {
             hasAdded.append(false)
         }
@@ -43,6 +64,21 @@ class EnlargeRecipeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
             
+        var url = URL(string: myDict[Variables.global.selectedRecipe]![2] as! String)!
+        
+        print("URL: \(url)")
+        
+        DispatchQueue.global().async {
+            // Fetch Image Data
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    // Create Image and Update Image View
+                    self.recipeImage.image = UIImage(data: data)
+                }
+            }
+        }
+        
+        
 //        ingredientLabel.numberOfLines = 0
         
         ingredientLabel.text = ""
@@ -61,9 +97,6 @@ class EnlargeRecipeViewController: UIViewController {
         let myInstructions = myDict[Variables.global.selectedRecipe]![0]
         
         instructionLabel.text = "Instructions Link: \(myInstructions)"
-        // Sets the recipes
-        
-//        print(Variables.global.recipes)
     }
     
     func getInstructions(recipeDict: [String:Array<Any>]) -> [String]{
