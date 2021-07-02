@@ -61,7 +61,6 @@ class ShowRecipeTableViewController: UITableViewController {
         } else {
             myDict = glutenFree.merging(vegetarian){(_, second) in second}
         }
-//        print(myDict)
     }
     
     func filterRecipeName(recipeDict: [String:Array<Any>]) -> [String]{
