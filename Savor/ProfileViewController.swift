@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController {
         if !buttonClicked{
             myNutrients = "glutenFree"
             glutenFreePlus.text = "✅"
-            glutenFreeButton.backgroundColor = UIColor.green
+            glutenFreeButton.backgroundColor = UIColor(red: 67/255, green: 97/255, blue: 39/255, alpha: 1)
             disableAllButtons()
             glutenFreeButton.isEnabled = true
             buttonClicked = true
@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController {
         if !buttonClicked{
             myNutrients = "vegetarian"
             vegetarianPlus.text = "✅"
-            vegetarianButton.backgroundColor = UIColor.green
+            vegetarianButton.backgroundColor = UIColor(red: 67/255, green: 97/255, blue: 39/255, alpha: 1)
             disableAllButtons()
             vegetarianButton.isEnabled = true
             buttonClicked = true
@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
         if !buttonClicked{
             myNutrients = "vegetarian"
             NAPlus.text = "✅"
-            NAButton.backgroundColor = UIColor.green
+            NAButton.backgroundColor = UIColor(red: 67/255, green: 97/255, blue: 39/255, alpha: 1)
             disableAllButtons()
             NAButton.isEnabled = true
             buttonClicked = true
