@@ -20,9 +20,9 @@ class EnlargeRecipeViewController: UIViewController {
     
     @IBOutlet weak var addGroceryList: UIButton!
     
-    @IBOutlet weak var recipeNameLabel: UILabel!
+    @IBOutlet weak var ingredientLabel: UITextView!
     
-    @IBOutlet weak var ingredientLabel: UILabel!
+    @IBOutlet weak var recipeNameLabel: UILabel!
     
     @IBOutlet weak var instructionLabel: UILabel!
     
@@ -43,7 +43,7 @@ class EnlargeRecipeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
             
-        ingredientLabel.numberOfLines = 0
+//        ingredientLabel.numberOfLines = 0
         
         ingredientLabel.text = ""
 //        ingredientLabel.text = "\(Variables.global.selectedRecipe) ingredients"
