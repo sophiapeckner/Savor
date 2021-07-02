@@ -31,31 +31,70 @@ class ProfileViewController: UIViewController {
     }
     
     
+    var buttonClicked = false
+    
     @IBAction func glutenFreeTap(_ sender: UIButton) {
-        myNutrients = "glutenFree"
-        glutenFreePlus.text = "✅"
-        glutenFreeButton.backgroundColor = UIColor.green
-        disableAllButtons()
+        if !buttonClicked{
+            myNutrients = "glutenFree"
+            glutenFreePlus.text = "✅"
+            glutenFreeButton.backgroundColor = UIColor.green
+            disableAllButtons()
+            glutenFreeButton.isEnabled = true
+            buttonClicked = true
+        }else{
+            myNutrients = ""
+            glutenFreePlus.text = "➕"
+            glutenFreeButton.backgroundColor = UIColor(red: 144/255, green: 77/255, blue: 31/255, alpha: 1)
+            enableAllButtons()
+            buttonClicked = false
+        }
     }
     
     
     @IBAction func vegetarianTap(_ sender: Any) {
-        myNutrients = "vegetarian"
-        vegetarianPlus.text = "✅"
-        vegetarianButton.backgroundColor = UIColor.green
-        disableAllButtons()
+        if !buttonClicked{
+            myNutrients = "vegetarian"
+            vegetarianPlus.text = "✅"
+            vegetarianButton.backgroundColor = UIColor.green
+            disableAllButtons()
+            vegetarianButton.isEnabled = true
+            buttonClicked = true
+        }else{
+            myNutrients = ""
+            vegetarianPlus.text = "➕"
+            vegetarianButton.backgroundColor = UIColor(red: 144/255, green: 77/255, blue: 31/255, alpha: 1)
+            enableAllButtons()
+            buttonClicked = false
+        }
     }
     
     @IBAction func NATap(_ sender: UIButton) {
-        NAPlus.text = "✅"
-        NAButton.backgroundColor = UIColor.green
-        disableAllButtons()
+        if !buttonClicked{
+            myNutrients = "vegetarian"
+            NAPlus.text = "✅"
+            NAButton.backgroundColor = UIColor.green
+            disableAllButtons()
+            NAButton.isEnabled = true
+            buttonClicked = true
+        }else{
+            myNutrients = ""
+            NAPlus.text = "➕"
+            NAButton.backgroundColor = UIColor(red: 144/255, green: 77/255, blue: 31/255, alpha: 1)
+            enableAllButtons()
+            buttonClicked = false
+        }
     }
     
     func disableAllButtons(){
         glutenFreeButton.isEnabled = false
         vegetarianButton.isEnabled = false
         NAButton.isEnabled = false
+    }
+    
+    func enableAllButtons(){
+        glutenFreeButton.isEnabled = true
+        vegetarianButton.isEnabled = true
+        NAButton.isEnabled = true
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
