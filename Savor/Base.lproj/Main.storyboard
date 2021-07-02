@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SavorBig (1)" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-Jr-RYa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SavorBig" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-Jr-RYa">
                                 <rect key="frame" x="31" y="152" width="367" height="406"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -31,7 +31,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="7"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -224,9 +224,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07p-C6-kRK">
-                                <rect key="frame" x="171" y="772" width="80" height="80"/>
+                                <rect key="frame" x="179" y="821" width="70" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="homeBrown"/>
+                                <connections>
+                                    <segue destination="fMK-hn-CGb" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3tU-1z-VjH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ffU-mO-Bob"/>
@@ -257,7 +260,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Corn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fww-vm-JBl">
                                             <rect key="frame" x="115" y="0.0" width="293" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -306,7 +309,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-Wi-pEP">
                                 <rect key="frame" x="20" y="201" width="388" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -413,26 +416,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-gD-7da">
-                                <rect key="frame" x="41" y="166" width="356" height="678"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-gD-7da">
+                                <rect key="frame" x="56" y="166" width="316" height="678"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99584501979999995" green="0.98059040310000001" blue="0.87380427120000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-yC-KHA">
-                                <rect key="frame" x="184" y="852" width="71" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="tintColor" red="0.30588235289999999" green="0.21960784310000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="person.crop.square.fill" catalog="system" symbolScale="large"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ScN-11-JOl" kind="show" id="L7s-Mq-Nw8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GROCERY LIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sS-2B-3ai">
                                 <rect key="frame" x="36" y="68" width="356" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -440,6 +431,26 @@
                                 <color key="textColor" red="0.56155037880000003" green="0.31013384459999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-7W-0IT">
+                                <rect key="frame" x="74" y="838" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="homeBrown"/>
+                                <connections>
+                                    <segue destination="fMK-hn-CGb" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="saV-2O-16x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-yC-KHA">
+                                <rect key="frame" x="295" y="838" width="59" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="tintColor" red="0.30588235289999999" green="0.21960784310000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="profileBrown" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ScN-11-JOl" kind="show" id="L7s-Mq-Nw8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2gM-PM-x3f"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -480,17 +491,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r6P-xN-KBt"/>
         <segue reference="L4v-Aa-AYO"/>
-        <segue reference="4t7-mV-GCb"/>
+        <segue reference="saV-2O-16x"/>
         <segue reference="20o-bP-Abg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Corn" width="460" height="460"/>
-        <image name="SavorBig (1)" width="500" height="500"/>
+        <image name="SavorBig" width="500" height="500"/>
         <image name="homeBrown" width="500" height="500"/>
         <image name="leftArrowBrown" width="500" height="500"/>
-        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="profileBrown" width="500" height="500"/>
         <image name="rightArrowBrown" width="500" height="500"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
