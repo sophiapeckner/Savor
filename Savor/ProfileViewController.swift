@@ -34,6 +34,7 @@ class ProfileViewController: UIViewController {
     @IBAction func glutenFreeTap(_ sender: UIButton) {
         myNutrients = "glutenFree"
         glutenFreePlus.text = "✅"
+        glutenFreeButton.backgroundColor = UIColor.green
         disableAllButtons()
     }
     
@@ -41,11 +42,13 @@ class ProfileViewController: UIViewController {
     @IBAction func vegetarianTap(_ sender: Any) {
         myNutrients = "vegetarian"
         vegetarianPlus.text = "✅"
+        vegetarianButton.backgroundColor = UIColor.green
         disableAllButtons()
     }
     
     @IBAction func NATap(_ sender: UIButton) {
         NAPlus.text = "✅"
+        NAButton.backgroundColor = UIColor.green
         disableAllButtons()
     }
     

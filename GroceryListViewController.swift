@@ -22,7 +22,7 @@ class GroceryListViewController: UIViewController {
         for (name, ingredients) in myGroceryList {
             showIngredients.text = showIngredients.text! + "\n\(name):"
             for ingredient in ingredients {
-                showIngredients.text = showIngredients.text! + "\n●\(ingredient)"
+                showIngredients.text = showIngredients.text! + "\n● \(ingredient)"
             }
         }
     }
