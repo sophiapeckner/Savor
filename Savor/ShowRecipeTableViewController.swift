@@ -30,7 +30,7 @@ class ShowRecipeTableViewController: UITableViewController {
       ["golden beets", "red beets", "fennel bulb", "red onion", "fingerling potatoes", "kabocha squash", "olive oil", "balsamic vinegar"]]
     ]
 
-    let vegitarian = [
+    let vegetarian = [
       "Naturally Sweet Apple Turnovers":
       ["http://www.foodista.com/recipe/TYW8P8Z5/naturally-sweet-apple-turnovers",
       ["diced apples", "brown sugar", "cream cheese", "egg yolk", "filo dough", "flour", "ground allspice", "ground cardamom", "ground cinnamon", "ground ginger", "lemon (juice)", "kosher salt", "maple syrup", "milk", "powdered sugar", "sugar", "unsalted butter", "frangelico"]],
@@ -49,19 +49,19 @@ class ShowRecipeTableViewController: UITableViewController {
       "Caramelized Tofu & Gala Apple Salad":["http://www.foodista.com/recipe/SRNHDHGT/caramelized-tofu-gala-apple-salad",
       ["brown sugar", "butter", "extra firm tofu", "diced gala apple", "garlic", "green lettuce", "raw pecans", "water"]]
     ]
-
-//    let allFoods = glutenFree.merging(vegitarian){(_, second) in second}
-
-    // ***
     
+    
+    // ***
     
     func findRecipe(){
         if (myNutrients == "glutenFree"){
             myDict = glutenFree
-        } else if (myNutrients == "vegitarian"){
-            myDict = vegitarian
+        } else if (myNutrients == "vegetarian"){
+            myDict = vegetarian
+        } else {
+            myDict = glutenFree.merging(vegetarian){(_, second) in second}
         }
-        print(myDict)
+//        print(myDict)
     }
     
     func filterRecipeName(recipeDict: [String:Array<Any>]) -> [String]{
@@ -81,14 +81,35 @@ class ShowRecipeTableViewController: UITableViewController {
         // Sets the recipes
         Variables.global.recipes = myNameArray
         
+        /*
+        print("noneTapped: \(noneTapped)")
         if (noneTapped == true){
             for _ in Variables.global.recipes {
                 hasTapped.append(false)
             }
         }
         
+        print("hasTapped.count: \(hasTapped.count)")
+        print("hasTapped: \(hasTapped)")
+        for myIndex in 0...hasTapped.count-1{
+            let indexPath = NSIndexPath(row: myIndex, section: 0)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell", for: indexPath as IndexPath)
+            if (hasTapped[myIndex] == true){
+                cell.textLabel?.text = Variables.global.recipes[indexPath.row] + "✅"
+                
+                print("Inside myIndex for loop: \(Variables.global.recipes[indexPath.row] + "✅"):\(myIndex)")
+            }
+        }
+        */
+        
     }
-
+    
+    /*
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    */
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -104,12 +125,6 @@ class ShowRecipeTableViewController: UITableViewController {
         tableView.rowHeight = 80
         // Fills corresponding image
         cell.imageView?.image = UIImage(named: Variables.global.recipes[indexPath.row])
-
-        for myIndex in 0...hasTapped.count-1{
-            if (hasTapped[myIndex] == true){
-                cell.textLabel?.text = Variables.global.recipes[indexPath.row] + "✅"
-            }
-        }
         return cell
     }
 
@@ -117,9 +132,10 @@ class ShowRecipeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
         Variables.global.selectedRecipe = Variables.global.recipes[indexPath.row]
-//        cell.backgroundColor=UIColor.systemRed
+        /*
         noneTapped = false
         hasTapped[indexPath.row] = true
+        */
     }
 
     /*
